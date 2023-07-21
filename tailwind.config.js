@@ -12,8 +12,8 @@ export default {
                 PrimaryActive: '#101828',
                 PrimaryDisabled: '#EAECF0',
                 SecondaryHover: '#F2F4F7',
-                SecondaryActive: 'box-shadow: 0px 0px 0px 4px #F2F4F7, 0px 1px 2px 0px rgba(16, 24, 40, 0.05)',
                 BorderGray: '#D0D5DD',
+                InputError: '#F97066',
             },
             fontFamily: {
                 euclid: 'Euclid Circular A',

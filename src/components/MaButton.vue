@@ -6,7 +6,7 @@ const props = defineProps({
   disabled: Boolean,
   intent: {
     type: String,
-    validator: (val)=> ["primary","secondary"].includes(val),
+    validator: (val) => ["primary", "secondary"].includes(val),
   },
 });
 
@@ -22,22 +22,29 @@ const buttonClass = computed(() => {
 
 <template>
   <button :class="buttonClass">
-    <slot>
-    </slot>
+    <slot> </slot>
   </button>
 </template>
 
 <style>
-.ma-button-default{
-  @apply text-center text-base   leading-6 w-80 flex py-3 px-6 justify-center items-center gap-2 self-stretch rounded-lg font-euclid;
+.ma-button-default {
+  @apply text-center text-base border-solid cursor-pointer leading-6 w-80 flex py-3 px-6 justify-center items-center gap-2 self-stretch rounded-lg font-euclid;
 }
-.ma-primary{
-  @apply bg-PrimaryDark text-white font-medium hover:bg-PrimaryHover ;
+.ma-primary {
+  @apply bg-PrimaryDark text-white font-medium hover:bg-PrimaryHover;
 }
-.ma-secondary{
-  @apply bg-white text-black border-BorderGray font-semibold hover:bg-SecondaryHover ;
+
+.ma-primary:active {
+  @apply bg-PrimaryActive;
 }
-.ma-disabled{
+.ma-secondary {
+  @apply bg-white text-black border-BorderGray font-semibold hover:bg-SecondaryHover;
+}
+
+.ma-secondary:active {
+  box-shadow: 0px 0px 0px 4px #f2f4f7, 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+.ma-disabled {
   @apply !bg-gray-100 !text-gray-400 cursor-not-allowed;
 }
 </style>
