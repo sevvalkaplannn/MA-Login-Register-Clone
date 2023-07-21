@@ -7,8 +7,8 @@
       </MaButton>
   </div>
   <div>
-    <MaInput type="email" v-model="email" label="E-mail" placeholder="Enter your e-mail"></MaInput>
-    <MaInput type="password" v-model="password" label="Password" placeholder="Set a strong password" helpText="At least 8 characters, one uppercase, one lowercase, one digit and one special character "></MaInput>
+    <MaInput type="email" id="email" v-model="email" label="E-mail" placeholder="Enter your e-mail"></MaInput>
+    <MaInput type="password" id="password" v-model="password" label="Password" placeholder="Set a strong password" helpText="At least 8 characters, one uppercase, one lowercase, one digit and one special character "></MaInput>
   </div>
 </template>
 

@@ -1,15 +1,38 @@
 <template>
-    <label class="ma-label" v-if="label" :for="inputId">{{ label }}</label>
-    <input :type="type" :id="inputId" :placeholder="placeholder" v-model="value" @input="$emit('update:modelValue', $event.target.value)" />
-    <small class="ma-helptext" v-if="helpText">{{ helpText }}</small>
+    <div :class="classNames">
+        <label class="ma-label" v-if="label" :for="$attrs.id">{{ label }}</label>
+        <input :id="$attrs.id" :type="type" :placeholder="placeholder" v-model="inputValue" />
+        <small class="ma-helptext" v-if="helpText">{{ helpText }}</small>
+    </div>
 </template>
 
 <script setup>
-import { ref, defineProps } from "vue";
+import { computed, defineProps } from "vue";
 
-defineProps(['type', 'label', 'placeholder', 'helpText']);
+const props = defineProps(['type', 'label', 'placeholder', 'helpText', 'modelValue', 'hasError', 'errorMessage']);
+const emits = defineEmits(['update:modelValue']);
+defineOptions({
+  inheritAttrs: false
+});
 
-const value = ref("");
+const inputValue = computed({
+    get(){
+        console.log(props.modelValue);
+        return props.modelValue;
+    },
+    set(data){
+        console.log(data);
+        emits("update:modelValue", data);
+    }
+});
+
+const classNames = computed(() => [
+    'ma-input-wrapper',
+    {
+        'has-error': props?.hasError
+    }
+]);
+
 </script>
 
 <style scoped>
@@ -19,7 +42,7 @@ input::placeholder{
 }
 
 input{
-@apply flex pt-3.5 pb-3.5 pr-60 pl-3 items-center self-stretch rounded-lg border border-gray-300 bg-white;
+@apply flex pt-3.5 pb-3.5 pr-60 pl-3 items-center self-stretch rounded-lg border border-solid border-gray-300 bg-white;
 }
 
 .ma-label{
