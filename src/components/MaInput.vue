@@ -73,7 +73,7 @@ input:active {
 }
 
 .ma-helpErrorText {
-  @apply w-80 h-8 self-stretch text-gray-400 font-euclid text-xs not-italic font-normal leading-4;
+  @apply w-80 h-8 self-stretch text-red-500 font-euclid text-xs not-italic font-normal leading-4;
 }
 
 .ma-input-wrapper {

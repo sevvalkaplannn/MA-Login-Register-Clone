@@ -29,7 +29,6 @@
         ></MaInput>
         <MaButton intent="primary">Create a free account</MaButton>
       </form>
-      {{ errors }}
     </div>
     <div class="ma-rightside">
       <div class="ma-testimonial-wrapper">
