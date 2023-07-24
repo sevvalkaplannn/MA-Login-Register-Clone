@@ -6,7 +6,7 @@
       helpEmptyText
     }}</small>
     <small
-      class="ma-helptext"
+      class="ma-helpErrorText"
       :style="{ color: helpTextColor }"
       v-else-if="shouldShowHelpErrorText"
       >{{ helpErrorText }}</small
@@ -46,7 +46,7 @@ const inputValue = computed({
 const classNames = computed(() => [
   "ma-input-wrapper",
   {
-    "has-error": props.error || inputValue.value.trim() === "",
+    "has-error": props.error,
   },
 ]);
 const helpTextColor = computed(() => {
@@ -68,7 +68,7 @@ input::placeholder {
 }
 
 input {
-  @apply flex pt-3.5 pb-3.5 pl-3 items-center self-stretch rounded-lg border border-solid border-gray-300 bg-white text-sm font-euclid not-italic font-medium leading-5 flex-1;
+  @apply flex w-[360px] pt-3.5 pb-3.5 pl-3 items-center self-stretch rounded-lg border border-solid border-gray-300 bg-white text-sm font-euclid not-italic font-medium leading-5 flex-1;
 }
 
 input:active {
@@ -79,9 +79,12 @@ input:active {
   @apply text-gray-500 font-euclid text-sm not-italic font-medium leading-5;
 }
 .ma-helptext {
-  @apply w-80 h-8 self-stretch text-gray-400 font-euclid text-xs not-italic font-normal leading-4;
+  @apply w-[360px] h-8 self-stretch text-gray-400 font-euclid text-xs not-italic font-normal leading-4;
 }
 
+.ma-helpErrorText{
+  @apply w-80 h-8 self-stretch text-gray-400 font-euclid text-xs not-italic font-normal leading-4;
+}
 .ma-input-wrapper {
   @apply grid w-80;
 }
