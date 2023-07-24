@@ -2,15 +2,12 @@
   <div :class="classNames">
     <label class="ma-label" v-if="label" :for="$attrs.id">{{ label }}</label>
     <input :id="$attrs.id" :type="type" :placeholder="placeholder" v-model="inputValue" />
-    <small class="ma-helptext" :style="{ color: helpTextColor }" v-if="helpText">{{
-      helpEmptyText
-    }}</small>
-    <small
-      class="ma-helpErrorText"
-      :style="{ color: helpTextColor }"
-      v-else-if="shouldShowHelpErrorText"
-      >{{ helpErrorText }}</small
-    >
+    <small class="ma-helpErrorText" v-if="shouldShowHelpErrorText">
+      {{ helpErrorText }}
+    </small>
+    <small class="ma-helptext" v-else-if="helpText">
+      {{ helpText }}
+    </small>
   </div>
 </template>
 
@@ -21,7 +18,6 @@ const props = defineProps([
   "type",
   "label",
   "placeholder",
-  "helpEmptyText",
   "helpErrorText",
   "helpText",
   "modelValue",
@@ -49,16 +45,9 @@ const classNames = computed(() => [
     "has-error": props.error,
   },
 ]);
-const helpTextColor = computed(() => {
-  return props.error || inputValue.value.trim() === "" ? "red" : "initial";
-});
 
 const shouldShowHelpErrorText = computed(() => {
   return props.error;
-});
-
-const helpEmptyText = computed(() => {
-  return inputValue.value.trim() === "" ? props.helpEmptyText : props.helpText;
 });
 </script>
 
@@ -78,13 +67,15 @@ input:active {
 .ma-label {
   @apply text-gray-500 font-euclid text-sm not-italic font-medium leading-5;
 }
+
 .ma-helptext {
   @apply w-[360px] h-8 self-stretch text-gray-400 font-euclid text-xs not-italic font-normal leading-4;
 }
 
-.ma-helpErrorText{
+.ma-helpErrorText {
   @apply w-80 h-8 self-stretch text-gray-400 font-euclid text-xs not-italic font-normal leading-4;
 }
+
 .ma-input-wrapper {
   @apply grid w-80;
 }
