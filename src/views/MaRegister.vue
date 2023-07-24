@@ -85,7 +85,7 @@ html{
   @apply flex justify-between h-full w-full ;
 }
 .ma-rightside{
-  @apply m-0  w-1/3;
+  @apply m-0  w-[33rem] max-[1024px]:hidden;
 }
 
 .ma-testimonial-wrapper {
@@ -95,6 +95,7 @@ html{
 .ma-button {
   @apply inline-flex items-center ;
 }
+
 
 
 </style>

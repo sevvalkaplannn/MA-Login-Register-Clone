@@ -52,7 +52,7 @@ import MaIcons from "../MaIcons.vue";
 } 
 
 .ma-block-quota{
-  @apply mt-[7rem] 
+  @apply mt-auto
 
 }
 
@@ -96,6 +96,6 @@ import MaIcons from "../MaIcons.vue";
 
 
 .ma-logos{
-@apply flex flex-row gap-8
+@apply flex flex-row justify-between mb-6
 }
 </style>
