@@ -48,7 +48,7 @@ import MaIcons from "../MaIcons.vue";
 }
 
 .ma-block-quota {
-  @apply mt-auto;
+  @apply mt-auto mb-[-5rem];
 }
 
 .ma-avatar {

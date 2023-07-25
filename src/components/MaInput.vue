@@ -57,7 +57,7 @@ input::placeholder {
 }
 
 input {
-  @apply flex w-[360px] pt-3.5 pb-3.5 pl-3 items-center self-stretch rounded-lg border border-solid border-gray-300 bg-white text-sm font-euclid not-italic font-medium leading-5 flex-1;
+  @apply flex w-[360px] max-[1024px]:w-full h-[46.4px] pt-3.5 pb-3.5 pl-3 mb-[1.5rem] items-center self-stretch rounded-lg border border-solid border-gray-300 bg-white text-sm font-euclid not-italic font-medium leading-5 flex-1;
 }
 
 input:active {
@@ -69,19 +69,19 @@ input:active {
 }
 
 .ma-helptext {
-  @apply w-[360px] h-8 self-stretch text-gray-400 font-euclid text-xs not-italic font-normal leading-4;
+  @apply w-[360px] h-8 max-[1024px]:w-full mt-[-1rem] mb-6 self-stretch text-gray-400 font-euclid text-xs not-italic font-normal leading-4;
 }
 
 .ma-helpErrorText {
-  @apply w-80 h-8 self-stretch text-red-500 font-euclid text-xs not-italic font-normal leading-4;
+  @apply w-80 h-8 self-stretch max-[1024px]:w-full  text-red-500 font-euclid text-xs not-italic font-normal leading-4;
 }
 
 .ma-input-wrapper {
-  @apply grid w-80;
+  @apply grid w-80 max-[1024px]:w-full;
 }
 
 .has-error input {
-  @apply border border-solid border-red-500;
+  @apply border border-solid  border-red-500;
 }
 
 .error-alert {
