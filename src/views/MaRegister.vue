@@ -97,7 +97,7 @@ html {
   @apply absolute left-0 top-0 flex justify-start ml-7 mt-7 gap-5 align-middle items-center  max-[1024px]:hidden;
 }
 .ma-wrapper {
-  @apply flex h-full xl:min-h-[700px] w-full justify-between;
+  @apply flex h-full lg:min-h-[700px] w-full justify-between;
 }
 .ma-rightside {
   @apply right-0  w-[33rem] max-[1024px]:hidden;
