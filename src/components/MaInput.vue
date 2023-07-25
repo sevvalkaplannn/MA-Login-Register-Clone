@@ -73,11 +73,11 @@ input:active {
 }
 
 .ma-helpErrorText {
-  @apply w-80 h-8 self-stretch max-[1024px]:w-full  text-red-500 font-euclid text-xs not-italic font-normal leading-4;
+  @apply w-80 h-8 self-stretch max-[1024px]:w-full mt-[-1rem] text-red-500 font-euclid text-xs not-italic font-normal leading-4;
 }
 
 .ma-input-wrapper {
-  @apply grid w-80 max-[1024px]:w-full;
+  @apply grid max-[1024px]:w-full;
 }
 
 .has-error input {

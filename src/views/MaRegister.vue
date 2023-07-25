@@ -115,7 +115,7 @@ html {
   @apply w-full flex flex-col items-center justify-center;
 }
 .ma-content {
-  @apply w-full flex flex-col max-[1024px]:w-full md:min-w-[335px] md:max-w-[22.5rem];
+  @apply w-full flex flex-col max-[1024px]:w-full max-[1024px]:px-5 md:min-w-[335px] md:max-w-[22.5rem];
 }
 
 .ma-title {
