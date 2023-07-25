@@ -6,7 +6,7 @@ const props = defineProps({
   disabled: Boolean,
   intent: {
     type: String,
-    validator: (val) => ["primary", "secondary"].includes(val),
+    validator: (val) => ["primary","ma-secondary-just-logo", "secondary"].includes(val),
   },
 });
 
@@ -14,7 +14,11 @@ const buttonClass = computed(() => {
   const baseClass = "ma-button-default";
   if (props.intent === "primary") {
     return `${baseClass} ma-primary`;
-  } else {
+  }
+  else if (props.intent === "ma-secondary-just-logo") {
+    return `${baseClass} ma-secondary-just-logo`;
+  }
+   else {
     return `${baseClass} ma-secondary`;
   }
 });
@@ -28,17 +32,25 @@ const buttonClass = computed(() => {
 
 <style>
 .ma-button-default {
-  @apply text-center max-[1024px]:w-full text-base cursor-pointer leading-6 w-[360px] flex h-12 py-3 px-6 justify-center items-center gap-2 self-stretch rounded-lg font-euclid;
+  @apply text-center text-base cursor-pointer leading-6 flex h-12 py-3 px-6 justify-center items-center gap-2 self-stretch rounded-lg font-euclid;
 }
 .ma-primary {
-  @apply bg-PrimaryDark text-white font-medium hover:bg-PrimaryHover border-none;
+  @apply bg-PrimaryDark max-[1024px]:w-full text-white font-medium w-[360px] hover:bg-PrimaryHover border-none;
+}
+
+.ma-secondary-just-logo{
+  @apply bg-white h-[43.6px] max-[1024px]:w-full w-[112px] text-black border-BorderGray border border-solid font-semibold hover:bg-SecondaryHover;;
+}
+
+.ma-secondary-just-logo:active{
+  box-shadow: 0px 0px 0px 4px #f2f4f7, 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
 }
 
 .ma-primary:active {
   @apply bg-PrimaryActive;
 }
 .ma-secondary {
-  @apply bg-white h-[43.6px] text-black border-BorderGray border border-solid font-semibold hover:bg-SecondaryHover;
+  @apply bg-white h-[43.6px] max-[1024px]:w-full w-[360px] text-black border-BorderGray border border-solid font-semibold hover:bg-SecondaryHover;
 }
 .ma-secondary:active {
   box-shadow: 0px 0px 0px 4px #f2f4f7, 0px 1px 2px 0px rgba(16, 24, 40, 0.05);

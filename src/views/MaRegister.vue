@@ -63,7 +63,7 @@
           <a
             data-v-72b92191=""
             role="button"
-            href="/login?forwardTo=/freemium&amp;ref=true"
+            href="/login"
             ><span class="ma-login-link">Log in</span></a
           >
         </p>
