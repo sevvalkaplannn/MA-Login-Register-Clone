@@ -1,17 +1,17 @@
 <template>
   <div class="ma-wrapper">
+    <div class="ma-header">
+      <MaIcons name="MobileActionLogo" />
+      <MaIcons name="linelogo" />
+      <MaIcons name="partnerlogo" />
+    </div>
     <div class="ma-leftside">
-      <div class="ma-header">
-        <MaIcons name="MobileActionLogo" class="w-6 h-6 z-10" />
-        <MaIcons name="linelogo" class="w-6 h-6 z-10" />
-        <MaIcons name="partnerlogo" class="w-6 h-6 z-10" />
-      </div>
       <div class="ma-content">
         <h1 class="ma-title">Let’s get started</h1>
         <p class="ma-trial">Start your 7-day free trial. Cancel any time.</p>
         <div>
-          <MaButton :class="buttonClass">
-            <MaIcons name="gmaillogo" class="w-6 h-6 z-10" />
+          <MaButton>
+            <MaIcons name="gmaillogo" />
             Continue with Google
           </MaButton>
           <div class="ma-text-sep">
@@ -70,9 +70,7 @@
       </div>
     </div>
     <div class="ma-rightside">
-      <div class="ma-testimonial-wrapper">
-        <MaTestimonial></MaTestimonial>
-      </div>
+      <MaTestimonial></MaTestimonial>
     </div>
   </div>
 </template>
@@ -96,13 +94,13 @@ html {
   @apply m-0 p-0;
 }
 .ma-header {
-  @apply flex justify-start ml-7 mt-7 gap-5 align-middle items-center  max-[1024px]:hidden;
+  @apply absolute left-0 top-0 flex justify-start ml-7 mt-7 gap-5 align-middle items-center  max-[1024px]:hidden;
 }
 .ma-wrapper {
-  @apply flex h-full w-full ;
+  @apply flex h-full xl:min-h-[700px] w-full justify-between;
 }
 .ma-rightside {
-  @apply right-0  w-[33rem] fixed max-[1024px]:hidden;
+  @apply right-0  w-[33rem] max-[1024px]:hidden;
 }
 
 .ma-testimonial-wrapper {
@@ -113,8 +111,11 @@ html {
   @apply inline-flex items-center max-[1024px]:w-full;
 }
 
+.ma-leftside {
+  @apply w-full flex flex-col items-center justify-center;
+}
 .ma-content {
-  @apply flex flex-col max-[1024px]:w-full xl:ml-[70%] lg:ml-[35%] mt-[2rem] md:min-w-[335px] md:max-w-[22.5rem]  md:ml-[50%] md:mr-[50%];
+  @apply w-full flex flex-col max-[1024px]:w-full md:min-w-[335px] md:max-w-[22.5rem];
 }
 
 .ma-title {
@@ -122,7 +123,7 @@ html {
 }
 
 .ma-trial {
-  background: var(--success-50, #ECFDF3);
+  background: var(--success-50, #ecfdf3);
   @apply ml-auto  max-[1024px]:w-full mr-auto mb-6 h-auto max-w-max text-center px-3 py-[3px];
   @apply border-solid items-center justify-center flex   border-emerald-500 rounded-[1000px] text-emerald-500 font-euclid text-xs not-italic font-medium leading-4 text-center;
 }
@@ -135,7 +136,7 @@ html {
   @apply mx-3 font-euclid  text-gray-400 text-xs not-italic font-medium leading-4;
 }
 .ma-sep {
-  @apply h-[1px] flex-1 w-10 ;
+  @apply h-[1px] flex-1 w-10;
   --tw-bg-opacity: 1;
   background-color: rgb(234 236 240 / var(--tw-bg-opacity));
 }

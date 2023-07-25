@@ -1,7 +1,7 @@
 <template>
   <div class="ma-testimonial-wrapper">
     <div class="ma-block-quota">
-      <MaIcons name="mark" class="ma-quota-symbol" />
+      <MaIcons name="mark" />
       <p class="ma-quota">
         Using MobileAction, we helped one of Europe’s largest fintechs grow their app
         downloads by <span class="ma-vector"> 1800% </span>in just 9 months and search
@@ -48,7 +48,7 @@ import MaIcons from "../MaIcons.vue";
 }
 
 .ma-block-quota {
-  @apply mt-auto mb-[-5rem];
+  @apply mt-auto mb-[-5rem] 2xl:mb-0;
 }
 
 .ma-avatar {
@@ -70,7 +70,7 @@ import MaIcons from "../MaIcons.vue";
 .ma-trusted-footer {
   --tw-text-opacity: 1;
   color: rgb(152 162 179 / var(--tw-text-opacity));
-  @apply flex justify-center flex-col gap-9 mt-[12rem] text-xs font-medium;
+  @apply flex justify-center flex-col gap-9 mt-auto text-xs font-medium;
 }
 .ma-trusted-by-header {
   @apply flex flex-row items-center;

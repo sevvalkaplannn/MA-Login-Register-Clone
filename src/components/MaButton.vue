@@ -31,7 +31,7 @@ const buttonClass = computed(() => {
   @apply text-center max-[1024px]:w-full text-base cursor-pointer leading-6 w-[360px] flex h-12 py-3 px-6 justify-center items-center gap-2 self-stretch rounded-lg font-euclid;
 }
 .ma-primary {
-  @apply bg-PrimaryDark text-white font-medium hover:bg-PrimaryHover border-none h-4/5;
+  @apply bg-PrimaryDark text-white font-medium hover:bg-PrimaryHover border-none;
 }
 
 .ma-primary:active {
