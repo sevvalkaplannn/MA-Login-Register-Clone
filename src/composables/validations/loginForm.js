@@ -5,7 +5,7 @@ export const LoginFormFiels = () => {
     const { errors, handleSubmit } = useForm()
     const { value: email } = useField('email', yup.string().required('Email is required'), { initialValue: '' })
     const { value: password } = useField(
-        'password_login',
+        'password',
         yup
         .string()
         .required('Password is required'), {
