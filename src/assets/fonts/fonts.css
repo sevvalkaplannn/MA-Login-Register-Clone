@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./EuclidCircularARegular.woff2") format("woff2");
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  @font-face {
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./EuclidCircularARegular.woff") format("woff");
+  }
+  @font-face {
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("./EuclidCircularASemibold.woff2") format("woff2");
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  @font-face {
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("./EuclidCircularASemibold.woff") format("woff");
+  }
+  @font-face {
+    font-family: "Euclid Circular A";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./EuclidCircularAItalic.woff2") format("woff2");
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  @font-face {
+    font-family: "Euclid Circular A";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./EuclidCircularAItalic.woff") format("woff");
+  }
+  @font-face {
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("./EuclidCircularAMedium.woff2") format("woff2");
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  @font-face {
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("./EuclidCircularAMedium.woff") format("woff");
+  }
+  @font-face {
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("./EuclidCircularABold.woff2") format("woff2");
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  @font-face {
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("./EuclidCircularABold.woff") format("woff");
+  }
