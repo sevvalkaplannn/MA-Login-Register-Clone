@@ -18,7 +18,7 @@
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: url("./EuclidCircularASemibold.woff2") format("woff2");
+    src: url("./EuclidCircularASemiBold.woff2") format("woff2");
     unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
   }
   @font-face {
@@ -26,7 +26,7 @@
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: url("./EuclidCircularASemibold.woff") format("woff");
+    src: url("./EuclidCircularASemiBold.woff") format("woff");
   }
   @font-face {
     font-family: "Euclid Circular A";
