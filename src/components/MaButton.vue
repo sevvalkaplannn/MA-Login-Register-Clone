@@ -32,7 +32,7 @@ const buttonClass = computed(() => {
 
 <style>
 .ma-button-default {
-  @apply text-center text-base cursor-pointer leading-6 flex h-12 py-3 px-6 justify-center items-center gap-2 self-stretch rounded-lg font-euclid;
+  @apply text-center text-base cursor-pointer leading-6 flex h-12 py-3 px-6 justify-center items-center gap-2 self-stretch rounded-lg font-euclid transition-colors duration-200;
 }
 .ma-primary {
   @apply bg-PrimaryDark max-[1024px]:w-full text-white font-medium w-[360px] hover:bg-PrimaryHover border-none;
@@ -43,7 +43,7 @@ const buttonClass = computed(() => {
 }
 
 .ma-secondary-just-logo:active{
-  box-shadow: 0px 0px 0px 4px #f2f4f7, 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  @apply shadow-[0px_0px_0px_4px_#f2f4f7,0px_1px_2px_0px_rgba(16,24,40,0.05)];
 }
 
 .ma-primary:active {
@@ -53,7 +53,7 @@ const buttonClass = computed(() => {
   @apply bg-white h-[43.6px] max-[1024px]:w-full w-[360px] text-black border-BorderGray border border-solid font-semibold hover:bg-SecondaryHover;
 }
 .ma-secondary:active {
-  box-shadow: 0px 0px 0px 4px #f2f4f7, 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  @apply shadow-[0px_0px_0px_4px_#f2f4f7,0px_1px_2px_0px_rgba(16,24,40,0.05)];
 }
 .ma-disabled {
   @apply !bg-gray-100 !text-gray-400 cursor-not-allowed;

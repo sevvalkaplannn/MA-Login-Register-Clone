@@ -57,13 +57,15 @@ input::placeholder {
 }
 
 input {
-  @apply flex w-[360px] max-[1024px]:w-full h-[46.4px] pt-3.5 pb-3.5 pl-3 mb-[1.5rem] items-center self-stretch rounded-lg border border-solid border-gray-300 bg-white text-sm font-euclid not-italic font-medium leading-5 flex-1;
+  @apply flex w-[360px] max-[1024px]:w-full h-[46.4px] pt-3.5 pb-3.5 pl-3 mb-[1.5rem] items-center self-stretch rounded-lg border border-solid border-gray-300 bg-white text-sm font-euclid not-italic font-medium leading-5 flex-1 outline-none;
 }
 
 input:active {
   @apply bg-gray-200 border-solid outline-2;
 }
-
+input:focus {
+  @apply border-blue-400 border-solid outline-2 transition-colors duration-200;
+}
 .ma-label {
   @apply text-gray-500 font-euclid text-sm not-italic font-medium leading-5;
 }

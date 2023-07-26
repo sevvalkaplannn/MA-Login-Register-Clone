@@ -4,6 +4,7 @@ import * as yup from 'yup'
 export const RegisterFormFiels = () => {
     const { errors, handleSubmit } = useForm()
     const { value: email } = useField('email', yup.string().email('Email must be valid').required('Email is required'), { initialValue: '' })
+    const { value: email_login } = useField('email_login', yup.string().required('Email is required'), { initialValue: '' })
     const { value: password } = useField(
         'password',
         yup
@@ -19,11 +20,21 @@ export const RegisterFormFiels = () => {
             initialValue: ''
         }
     )
+    const { value: password_login } = useField(
+        'password_login',
+        yup
+        .string()
+        .required('Password is required'), {
+            initialValue: ''
+        }
+    )
 
     return {
         errors,
         handleSubmit,
         email,
-        password
+        email_login,
+        password,
+        password_login
     }
 }

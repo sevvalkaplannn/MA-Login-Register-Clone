@@ -30,22 +30,22 @@
         </div>
         <form @submit.prevent="submit">
           <MaInput
-            type="email"
-            id="email"
-            v-model="email"
+            type="email_login"
+            id="email_login"
+            v-model="email_login"
             label="E-mail"
             placeholder="Enter your e-mail"
-            :error="errors.email"
-            :helpErrorText="errors.email"
+            :error="errors.email_login"
+            :helpErrorText="errors.email_login"
           ></MaInput>
           <MaInput
-            type="password"
-            id="password"
-            v-model="password"
+            type="password_login"
+            id="password_login"
+            v-model="password_login"
             label="Password"
             placeholder="Set a strong password"
-            :error="errors.password"
-            :helpErrorText="errors.password"
+            :error="errors.password_login"
+            :helpErrorText="errors.password_login"
           >
           </MaInput>
           <a
@@ -104,7 +104,7 @@ import MaButton from "../components/MaButton.vue";
 import MaInput from "../components/MaInput.vue";
 import { RegisterFormFiels } from "@/composables/validations/registerForm";
 
-const { email, password, handleSubmit, errors } = RegisterFormFiels();
+const { email_login, password_login, handleSubmit, errors } = RegisterFormFiels();
 
 const submit = handleSubmit((values) => {
   console.log("form submitted", values);
@@ -113,10 +113,8 @@ const submit = handleSubmit((values) => {
 
 <style scoped>
 .ma-bg {
-  @apply sm:w-full sm:min-h-full items-center flex relative justify-center bg-no-repeat bg-top bg-gray-50 max-[768px]:bg-white;
+  @apply sm:w-full sm:min-h-full items-center flex relative justify-center bg-no-repeat bg-top bg-gray-50 max-[768px]:bg-white bg-[length:100%] bg-[url(../assets/background/login.svg)] max-[768px]:bg-none ;
   --tw-bg-opacity: 1;
-  background-size: 100%;
-  background-image: url(../assets/background/login.svg);
 }
 .ma-logo-buttons {
   @apply flex flex-row justify-center gap-3;
@@ -140,10 +138,7 @@ const submit = handleSubmit((values) => {
 }
 
 .ma-content {
-  box-shadow: 0px 74px 44px 0px rgba(135, 135, 135, 0.05),
-    0px 131px 53px 0px rgba(135, 135, 135, 0.01),
-    0px 205px 57px 0px rgba(135, 135, 135, 0);
-  @apply w-full md:h-[36rem]  md:flex flex-col max-[768px]:w-full md:min-w-[335px] max-[768px]:px-5 justify-center items-center md:w-[30rem] bg-white rounded-2xl py-16 mt-16;
+  @apply w-full md:h-[36rem]  md:flex flex-col max-[768px]:w-full md:min-w-[335px] max-[768px]:px-5 justify-center items-center md:w-[30rem] bg-white rounded-2xl py-16 md:mt-16 shadow-[0px_74px_44px_0px_rgba(135,135,135,0.05),0px_131px_53px_0px_rgba(135,135,135,0.01),0px_205px_57px_0px_rgba(135,135,135,0)] max-[768px]:shadow-none;
 }
 
 
@@ -183,15 +178,6 @@ const submit = handleSubmit((values) => {
 }
 
 .ma-footer {
-  @apply absolute left-0 bottom-0 w-full flex-row content-between p-8 flex text-gray-500 font-euclid text-sm font-normal leading-5 justify-between
-}
-
-@media (max-width: 768px) {
-    .ma-bg {
-      background-image: none;
-    }
-    .ma-footer{
-        display: none;
-    }
+  @apply absolute left-0 bottom-0 w-full flex-row content-between p-8 flex text-gray-500 font-euclid text-sm font-normal leading-5 justify-between max-[768px]:hidden;
 }
 </style>
