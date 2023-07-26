@@ -30,22 +30,22 @@
         </div>
         <form @submit.prevent="submit">
           <MaInput
-            type="email_login"
-            id="email_login"
-            v-model="email_login"
+            type="email"
+            id="email"
+            v-model="email"
             label="E-mail"
             placeholder="Enter your e-mail"
-            :error="errors.email_login"
-            :helpErrorText="errors.email_login"
+            :error="errors.email"
+            :helpErrorText="errors.email"
           ></MaInput>
           <MaInput
-            type="password_login"
-            id="password_login"
-            v-model="password_login"
+            type="password"
+            id="password"
+            v-model="password"
             label="Password"
             placeholder="Set a strong password"
-            :error="errors.password_login"
-            :helpErrorText="errors.password_login"
+            :error="errors.password"
+            :helpErrorText="errors.password"
           >
           </MaInput>
           <a
@@ -102,9 +102,9 @@
 import MaIcons from "../MaIcons.vue";
 import MaButton from "../components/MaButton.vue";
 import MaInput from "../components/MaInput.vue";
-import { RegisterFormFiels } from "@/composables/validations/registerForm";
+import { LoginFormFiels } from "@/composables/validations/loginForm.js";
 
-const { email_login, password_login, handleSubmit, errors } = RegisterFormFiels();
+const { email, password, handleSubmit, errors } = LoginFormFiels();
 
 const submit = handleSubmit((values) => {
   console.log("form submitted", values);
