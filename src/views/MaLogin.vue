@@ -113,14 +113,11 @@ const submit = handleSubmit((values) => {
 
 <style scoped>
 .ma-bg {
-  @apply sm:w-full sm:min-h-full items-center flex relative justify-center bg-no-repeat bg-top bg-gray-50;
+  @apply sm:w-full sm:min-h-full items-center flex relative justify-center bg-no-repeat bg-top bg-gray-50 max-[768px]:bg-white;
   --tw-bg-opacity: 1;
   background-size: 100%;
   background-image: url(../assets/background/login.svg);
-  
 }
-
-
 .ma-logo-buttons {
   @apply flex flex-row justify-center gap-3;
 }
@@ -128,13 +125,16 @@ const submit = handleSubmit((values) => {
   @apply absolute left-0 top-0 flex justify-start ml-7 mt-7 gap-5 align-middle items-center  max-[1024px]:hidden;
 }
 .ma-wrapper {
-  @apply flex lg:min-h-[700px] justify-between ;
+  @apply flex lg:min-h-[700px] justify-between max-[767px]:w-full max-[767px]:h-full;
 }
 
 .ma-forgot-password {
   @apply w-[360px] h-8 max-[768px]:w-full flex justify-end text-gray-400 font-euclid text-xs not-italic font-normal leading-4;
 }
 
+.ma-forgot-password:hover{
+  @apply underline-offset-8 underline text-[#4478FF]
+}
 .ma-button {
   @apply inline-flex items-center max-[768px]:w-full;
 }
@@ -143,7 +143,7 @@ const submit = handleSubmit((values) => {
   box-shadow: 0px 74px 44px 0px rgba(135, 135, 135, 0.05),
     0px 131px 53px 0px rgba(135, 135, 135, 0.01),
     0px 205px 57px 0px rgba(135, 135, 135, 0);
-  @apply w-full h-[36rem] flex flex-col max-[768px]:w-full md:min-w-[335px] max-[768px]:px-5 justify-center items-center md:w-[30rem] bg-white rounded-2xl py-16 mt-16;
+  @apply w-full md:h-[36rem]  md:flex flex-col max-[768px]:w-full md:min-w-[335px] max-[768px]:px-5 justify-center items-center md:w-[30rem] bg-white rounded-2xl py-16 mt-16;
 }
 
 
@@ -179,7 +179,7 @@ const submit = handleSubmit((values) => {
 }
 
 .ma-login-link {
-  @apply font-euclid text-center max-[768px]:w-full text-[#4478FF] text-xs not-italic leading-4 font-medium tracking-wide ml-2;
+  @apply font-euclid text-center max-[768px]:w-full text-[#4478FF] text-xs not-italic leading-4 font-medium tracking-wide ml-2 hover:underline underline-offset-8;
 }
 
 .ma-footer {

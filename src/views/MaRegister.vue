@@ -150,6 +150,8 @@ html {
 }
 
 .ma-login-link {
-  @apply font-euclid text-center max-[1024px]:w-full text-[#4478FF] text-xs not-italic leading-4 font-medium tracking-wide ml-2;
+  @apply font-euclid text-center max-[1024px]:w-full text-[#4478FF] text-xs not-italic leading-4 font-medium tracking-wide ml-2 hover:underline underline-offset-8;
 }
+
+
 </style>
