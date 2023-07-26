@@ -1,9 +1,17 @@
 <template>
   <div class="ma-wrapper">
     <div class="ma-header">
-      <MaIcons name="MobileActionLogo" />
+      <RouterLink to="/">
+        <MaIcons name="MobileActionLogo"
+         />
+      </RouterLink>
       <MaIcons name="linelogo" />
-      <MaIcons name="partnerlogo" />
+      <a
+        href="        https://www.searchads.com/
+"
+      >
+        <MaIcons name="partnerlogo" />
+      </a>
     </div>
     <div class="ma-leftside">
       <div class="ma-content">

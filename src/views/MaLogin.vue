@@ -2,9 +2,16 @@
   <div class="ma-bg">
     <div class="ma-wrapper">
       <div class="ma-header">
-        <MaIcons name="mobileactionlogowhite" />
+        <RouterLink to="/">
+          <MaIcons name="mobileactionlogowhite" />
+        </RouterLink>
         <MaIcons name="linelogowhite" />
-        <MaIcons name="partnerlogowhite" />
+        <a
+          href="        https://www.searchads.com/
+"
+        >
+          <MaIcons name="partnerlogowhite" />
+        </a>
       </div>
 
       <div class="ma-content">
@@ -113,7 +120,7 @@ const submit = handleSubmit((values) => {
 
 <style scoped>
 .ma-bg {
-  @apply sm:w-full sm:min-h-full items-center flex relative justify-center bg-no-repeat bg-top bg-gray-50 max-[768px]:bg-white bg-[length:100%] bg-[url(../assets/background/login.svg)] max-[768px]:bg-none ;
+  @apply sm:w-full sm:min-h-full items-center flex relative justify-center bg-no-repeat bg-top bg-gray-50 max-[768px]:bg-white bg-[length:100%] bg-[url(../assets/background/login.svg)] max-[768px]:bg-none;
   --tw-bg-opacity: 1;
 }
 .ma-logo-buttons {
@@ -130,8 +137,8 @@ const submit = handleSubmit((values) => {
   @apply w-[360px] h-8 max-[768px]:w-full flex justify-end text-gray-400 font-euclid text-xs not-italic font-normal leading-4;
 }
 
-.ma-forgot-password:hover{
-  @apply underline-offset-8 underline text-[#4478FF]
+.ma-forgot-password:hover {
+  @apply underline-offset-8 underline text-[#4478FF];
 }
 .ma-button {
   @apply inline-flex items-center max-[768px]:w-full;
@@ -140,7 +147,6 @@ const submit = handleSubmit((values) => {
 .ma-content {
   @apply w-full md:h-[36rem]  md:flex flex-col max-[768px]:w-full md:min-w-[335px] max-[768px]:px-5 justify-center items-center md:w-[30rem] bg-white rounded-2xl py-16 md:mt-16 shadow-[0px_74px_44px_0px_rgba(135,135,135,0.05),0px_131px_53px_0px_rgba(135,135,135,0.01),0px_205px_57px_0px_rgba(135,135,135,0)] max-[768px]:shadow-none;
 }
-
 
 .ma-title {
   @apply text-gray-900 max-[768px]:w-full mb-[0.75rem] text-center font-euclid text-[32px] not-italic font-semibold leading-[48px];
