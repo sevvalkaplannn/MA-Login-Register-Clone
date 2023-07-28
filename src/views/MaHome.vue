@@ -24,6 +24,35 @@
           <MaIcons name="MobileActionLogo" />
         </RouterLink>
       </div>
+
+      <div class="ma-dropdown">
+        <nav id="nav">
+          <ul class="">
+            <li v-for="item in items" :key="item.name">
+              <a v-if="!item.children" :href="item.url">{{ item.name }}</a>
+              <span
+                v-else
+                @mouseover="mouseover(item.name)"
+                @mouseleave="mouseleave(item.name)"
+              >
+                
+                  {{ item.name }}
+                  <span>
+                    <MaIcons name="dropdownlogo" />
+                  </span>
+                
+
+                <ul class="dropdown" :class="{ isOpen: dropdownOpen[item.name] }">
+                  <li v-for="child in item.children" :key="child.name">
+                    <a :href="child.url">{{ child.name }}</a>
+                  </li>
+                </ul>
+              </span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
       <div class="ma-buttons-wrapper">
         <MaButton intent="header-primary" class="">Schedule a demo</MaButton>
         <MaButton intent="header-primary" class="ma-button">
@@ -37,6 +66,157 @@
 <script setup>
 import MaIcons from "../MaIcons.vue";
 import MaButton from "../components/MaButton.vue";
+
+import { ref } from "vue";
+
+const dropdownOpen = ref({});
+const items = [
+  {
+    name: "Solutions",
+    children: [
+      {
+        url: "https://www.mobileaction.co/solutions/aso-mobile-user-acquisition/",
+        name: "ASO, User Acquisition & Growth",
+      },
+      {
+        url: "https://www.mobileaction.co/solutions/mobile-app-publishing-management/",
+        name: "App Publishing & Product Management",
+      },
+      {
+        url: "https://www.mobileaction.co/solutions/mobile-app-marketing-advertising/",
+        name: "Marketing, Advertising & Research",
+      },
+    ],
+  },
+  {
+    name: "Products",
+    children: [
+      {
+        url: "#service1",
+        name: "Service1",
+      },
+      {
+        url: "#service2",
+        name: "Service2",
+      },
+      {
+        url: "#service3",
+        name: "Service3",
+      },
+    ],
+  },
+  {
+    name: "Resources",
+    children: [
+      {
+        url:
+          "https://marketing.mobileaction.co/the-app-marketers-handbook-for-ios-15-user-acquisition?hsLang=en#download-report",
+        name: "iOS 15 User Acquisition Guide",
+      },
+      {
+        url: "#service2",
+        name: "Mobile User Acquisition Guide",
+      },
+      {
+        url: "#service3",
+        name: "Custom Product Pages Guide",
+      },
+      {
+        url: "#service3",
+        name: "Mobile Ad Trends 2021 Report",
+      },
+      {
+        url: "#service3",
+        name: "Growth University",
+      },
+      {
+        url: "#service3",
+        name: "Webinars",
+      },
+      {
+        url: "#service3",
+        name: "Success Stories",
+      },
+      {
+        url: "#service3",
+        name: "API Documentation",
+      },
+      {
+        url: "#service3",
+        name: "App Store Optimization",
+      },
+      {
+        url: "#service3",
+        name: "Help Center",
+      },
+      {
+        url: "#service3",
+        name: "Academy",
+      },
+      {
+        url: "#service3",
+        name: "E-Books",
+      },
+      {
+        url: "#service3",
+        name: "Glossary",
+      },
+      {
+        url: "#service3",
+        name: "Top Charts",
+      },
+      {
+        url: "#service3",
+        name: "What's New",
+      },
+      {
+        url: "#service3",
+        name: "Security Information",
+      },
+    ],
+  },
+  {
+    name: "Free Tools",
+    children: [
+      {
+        url: "#service1",
+        name: "Apple Search Ads Audit",
+      },
+      {
+        url: "#service2",
+        name: "Apple Search Ads Performance Grader",
+      },
+      {
+        url: "#service3",
+        name: "App Report",
+      },
+      {
+        url: "#service3",
+        name: "Ad Library",
+      },
+      {
+        url: "#service3",
+        name: "AI Keyword Generator",
+      },
+    ],
+  },
+  {
+    url: "https://www.mobileaction.co/blog/",
+    name: "Blog",
+  },
+  {
+    url: "https://www.mobileaction.co/pricing/",
+    name: "Pricing",
+  },
+];
+
+function mouseover(itemName) {
+  dropdownOpen.value[itemName] = true;
+}
+
+function mouseleave(itemName) {
+  dropdownOpen.value[itemName] = false;
+}
 </script>
 
 <style scoped>
@@ -82,5 +262,34 @@ import MaButton from "../components/MaButton.vue";
 
 .ma-buttons-wrapper {
   @apply flex min-w-[460px] gap-4;
+}
+
+.ma-row {
+  @apply flex align-middle;
+}
+#nav > ul {
+  @apply flex list-none m-0 p-0;
+}
+#nav > ul > li > a {
+  @apply block h-auto text-[1.1rem] text-black hover:underline   p-5;
+}
+#nav > ul > li > span {
+  @apply relative block h-auto cursor-pointer text-[1.1rem] text-black p-5;
+}
+
+#nav > ul > li > span {
+@apply hover:underline decoration-red-600 decoration-2  underline-offset-4;
+}
+.dropdown {
+  @apply absolute hidden list-none bg-[white] p-0 left-0 top-full;
+}
+.dropdown li {
+  @apply w-[250px];
+}
+.dropdown li a {
+  @apply block text-[black] text-base no-underline hover:underline p-2.5;
+}
+.isOpen {
+  @apply block;
 }
 </style>

@@ -219,6 +219,8 @@
     </defs>
   </svg>
 
+  <svg v-if="name === 'dropdownlogo'" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class=" ma-dropdown-logo ma-menu-caret-down-icon svg-inline--fa fa-caret-down fa-w-10" data-v-641adee4=""><path fill="currentColor" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z" data-v-641adee4="" class=""></path></svg>
+
   
 </template>
 
@@ -233,5 +235,17 @@ defineProps({
 <style scoped>
 .ma-quota-symbol {
   @apply mb-[48px];
+}
+
+.ma-dropdown-logo{
+  @apply w-[0.625em] inline-block text-[inherit] h-[1em] mb-[2px];
+
+}
+
+.ma-dropdown-logo:hover{
+  @apply rotate-180;
+  -webkit-transition: -webkit-transform .4s ease-in-out;
+  -ms-transition: -ms-transform .4s ease-in-out;
+  transition: transform .4s ease-in-out;  
 }
 </style>
